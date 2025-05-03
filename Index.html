@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trippy Game Zone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: #ff00ff;
+            background-image: url('https://media.tenor.com/PCM07T_TUzIAAAAM/trippy-lsd.gif');
+            background-repeat: repeat;
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+            animation: backgroundGlitch 5s infinite;
+        }
+
+        .title {
+            font-size: 5rem;
+            font-weight: bold;
+            color: yellow;
+            text-shadow: 2px 2px 5px #ff00ff, 0 0 25px #ff00ff, 0 0 5px darkorange;
+            animation: blink 1s step-start infinite;
+            margin-top: 50px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #ff00ff;
+            background-color: #0000ff;
+            margin: 0 15px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-shadow: 1px 1px 3px #ff00ff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+            background-color: #000;
+            transform: scale(1.2) rotate(15deg);
+            box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        }
+
+        section {
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 5px solid #ff00ff;
+            box-shadow: 0 0 20px #ff00ff;
+            animation: flash 2s infinite alternate;
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        @keyframes flash {
+            0% {
+                border-color: #ff00ff;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+            50% {
+                border-color: yellow;
+                background-color: rgba(255, 0, 255, 0.8);
+            }
+            100% {
+                border-color: #ff00ff;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .game-preview {
+            margin-top: 30px;
+        }
+
+        .game-frame {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #0000ff;
+            border: 5px solid #ff00ff;
+            box-shadow: 0 0 15px #ff00ff;
+            animation: gameGlow 1s infinite alternate;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        @keyframes gameGlow {
+            0% {
+                box-shadow: 0 0 20px #ff00ff;
+                background-color: #0000ff;
+            }
+            100% {
+                box-shadow: 0 0 50px #ff00ff;
+                background-color: #000;
+            }
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0000ff;
+            color: white;
+            font-size: 1.2rem;
+            border: 2px solid #ff00ff;
+            text-decoration: none;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-shadow: 1px 1px 3px #ff00ff;
+            transition: all 0.3s ease;
+            animation: flash 1.5s infinite alternate;
+        }
+
+        .download-btn:hover {
+            background-color: black;
+            color: #ff00ff;
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px #ff00ff;
+        }
+
+        footer a {
+            color: #ff00ff;
+            text-decoration: none;
+            padding: 5px;
+            border: 2px solid #ff00ff;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: yellow;
+            background-color: #ff00ff;
+            border: 2px solid yellow;
+            transform: rotate(10deg);
+            box-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 50px yellow;
+        }
+
+        @keyframes backgroundGlitch {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 50% 50%;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="title">Welcome to the Trippy Game Zone!</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Get ready to trip through retro colors and pixelated wonders!</h2>
+            <p>Where funny ideas meet A bad game dev!</p>
+        </section>
+
+        <section id="games">
+            <h2>Featured Games</h2>
+            <div class="game-preview">
+                <h3>No Rest Only Road</h3>
+                <div class="game-frame">
+                    <img src="https://img.itch.zone/aW1nLzE5NjI1NTM3LnBuZw==/105x83%23/5m5Qhw.png" alt="Trippy Game Gif" width="400">
+                    <br><br>
+                    <a href="https://shady-sock.itch.io/no-rest-only-road" download class="download-btn">Download EXE</a>
+                </div>
+	 <div class="game-preview">
+                <h3></h3>
+                <div class="game-frame">
+                    <img src="https://img.itch.zone/aW1nLzIxMDA2MjE1LnBuZw==/105x83%23/8u4bv2.png" alt="Trippy Game Gif" width="400">
+                    <br><br>
+                    <a href="https://shady-sock.itch.io/antonk" download class="download-btn">Download EXE</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to join the trippy world of gaming? Hit us up if you're looking for your next adventure in the wild web!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Trippy Games | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+
+</body>
+</html>
+
+
+
